@@ -1,0 +1,26 @@
+[package]
+# Your app's name
+name = "my_app"
+# The current version; make sure to keep this up to date!
+version = "0.1.0"
+# The URL to the git repository; this is used for publishing releases
+repository = "https://github.com/alexanderjophus/hello-world-go"
+# The executables produced by your app
+binaries = ["example"]
+# The build command cargo-dist runs to produce those binaries
+build-command = ["go build -o example ."]
+
+# Config for 'cargo dist'
+[dist]
+# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.21.1-prerelease.1"
+# CI backends to support
+ci = "github"
+# The installers to generate for each app
+installers = ["shell"]
+# Target platforms to build apps for (Rust target-triple syntax)
+targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
+# Path that installers should place binaries in
+install-path = "CARGO_HOME"
+# Whether to install an updater program
+install-updater = true
