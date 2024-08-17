@@ -1,6 +1,6 @@
 [package]
 # Your app's name
-name = "my_app"
+name = "hello_world_go"
 # The current version; make sure to keep this up to date!
 version = "0.1.0"
 # The URL to the git repository; this is used for publishing releases
@@ -24,3 +24,6 @@ targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-
 install-path = "CARGO_HOME"
 # Whether to install an updater program
 install-updater = true
+
+[workspace.meta.dist]
+github-build-setup = "build-setup.yml"
